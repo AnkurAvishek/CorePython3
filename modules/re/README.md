@@ -5,7 +5,7 @@
     * when subsituting : both pattern and search string, same type(Unicode/8-bit)
 
 * Regex use \ to indicate special forms.
-    * \ can be searched using \\
+    * \ can be searched using \\\\
 
 * invalid escape sequence generate *DepricatedWaring*, in future *SyntaxError*
 
@@ -25,14 +25,14 @@ Funcition checks if a particular string matches a given regular expression
 [ . ^ $ * + ? { } [ ] \ | ( )]
 
 * . -> any character except new line;
-    * to match .  use '\.'
+    * to match .  use '\\.'
     * if DOTALL flag -> matches new line also 
 * ^ -> negate or beginning of string
     * MULTILINE mode -> matches immediately after new line
 * $ -> end of string
     * MULTILINE -> before newline
-* \* -> 0 or more repetition
-* \+ ->  1 or more repetition
+* '*' -> 0 or more repetition
+* '+' ->  1 or more repetition
 * { } -> exact Number {3}, {3,4},-> range of character repetition
     * a{3-5} -> 'aaaaa'
     * a{3-5}? -> 'aaa' -> ? -> match few repetions
